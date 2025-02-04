@@ -1,0 +1,80 @@
+// card.jsx file
+import React from 'react';
+
+function Card({ title, children }) {
+
+    return (
+        <>
+            <div style={style.cardDiv}>
+                <h2 style={style.h2}>{title}</h2>
+                <div style={style.content}>
+                    {children}
+                </div>
+            </div>
+        </>
+    )
+}
+
+
+let style = {
+
+    cardDiv: {
+        border: '1px solid #ddd',
+        borderRadius: '8px',
+        padding: '16px',
+        marginBottom: '20px',
+        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+    },
+
+    h2: {
+        fontSize: '20px',
+        fontWeight: 'bold',
+        marginBottom: '12px',
+    },
+
+    content: {
+        fontSize: "16px"
+    }
+
+};
+
+
+export default Card;
+
+// App.jsx file
+
+import Card from "./components/card"
+
+
+function App() {
+
+
+  return (
+    <>
+
+     <div>
+        <Card title="card 1" >
+           <p>this is Card 1</p>
+        </Card>
+
+        <Card title="card 2">
+           <p>this is card 2</p>
+        </Card>
+
+        <Card title="card 3">
+            <ul>
+               <li>Content</li>
+               <li>Content</li>
+               <li>Content</li>
+               <li>Content</li>
+            </ul>
+        </Card>
+     </div>
+
+
+    </>
+  )
+}
+
+export default App
+
