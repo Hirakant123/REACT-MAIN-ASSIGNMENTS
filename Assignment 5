@@ -1,0 +1,70 @@
+// Blog component
+
+
+
+export function Blog ({title, content, isFeatured}) {
+      
+
+    let cardStyle = {
+         border: "1px solid grey",
+         padding : "10px",
+         backgroundColor: isFeatured ? "light yellow" : "",
+         gap: "50px"
+         
+    }
+
+
+    return(
+        <> 
+         
+           <div style={cardStyle}>
+               <h2>{title}</h2>
+               <p>{content}</p>
+                
+           </div>
+        
+        </>
+    )
+}
+
+// App component
+
+
+import { Blog } from "./components/sample/Q1"
+
+function App() {
+
+
+   const blogs = [
+      { title: "React Basics", content: "Learn the basics of React.", isFeatured: true },
+      { title: "Advanced React", content: "Delve deeper into React.", isFeatured: false },
+      { title: "React Performance Tips", content: "Optimize your React apps.", isFeatured: true },
+    ];
+    
+
+   return (
+      <>
+
+        <div>
+           {
+            blogs.map((blog) => (
+               <Blog 
+                    title={blog.title}
+                    content={blog.content}
+                    isFeatured={blog.isFeatured}
+               />
+            ))
+           }
+        </div>
+
+
+      </>
+   )
+}
+
+
+
+
+export default App
+
+
