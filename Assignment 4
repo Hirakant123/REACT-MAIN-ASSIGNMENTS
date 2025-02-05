@@ -1,0 +1,122 @@
+// ListComponent
+
+function ListComponent({ items }) {
+    return (
+      <div>
+        <h2>Item List</h2>
+        {items.length > 0 && items.map((item) => <p>{item}</p>)}
+      </div>
+    );
+  }
+  
+
+export {ListComponent}
+
+// App Component
+
+
+import { ListComponent } from "./components/sample/Q1"
+
+function App() {
+
+   const items = ["Item 1", "Item 2", "Item 3"];
+   return (
+      <>
+
+         {/* <div id="container">
+
+
+            <div className="header-div">
+               <div >
+                  <h2>the Right Plan For <br /><span>Your Bussiness</span></h2>
+               </div>
+               <div>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                     <br></br> Numquam quaerat recusandae dicta repellendus? Earum repellat
+                     <br></br>tempore quaerat reprehenderit eum eaque. Quo nesciunt nobis
+                     <br></br> deserunt debitis iste eaque mollitia reiciendis at.</p>
+               </div>
+            </div>
+
+
+            <Card >
+               <div >
+                  <h2>Starter</h2>
+               </div>
+
+               <div>
+                  <ul>
+                     <li>content 1</li>
+                     <li>content 2</li>
+                     <li>content 3</li>
+                  </ul>
+               </div>
+
+               <div>
+                  <h1>Free</h1>
+               </div>
+
+               <div>
+                  <p className="btn">Get Started</p>
+               </div>
+
+            </Card>
+
+            <Card >
+               <div >
+                  <h2>Lerem Plus</h2>
+               </div>
+
+               <div>
+                  <ul>
+                     <li>content 1</li>
+                     <li>content 2</li>
+                     <li>content 3</li>
+                  </ul>
+               </div>
+
+               <div>
+                  <h1>{`$${30.00.toFixed(2)}`}</h1>
+               </div>
+
+               <div>
+                  <p className="btn btn2">Get Started</p>
+               </div>
+
+            </Card>
+
+            <Card >
+               <div >
+                  <h2>Lorem Pro</h2>
+               </div>
+
+               <div>
+                  <ul>
+                     <li>content 1</li>
+                     <li>content 2</li>
+                     <li>content 3</li>
+                  </ul>
+               </div>
+
+               <div>
+                  <h1>{`$${50.00.toFixed(2)}`}</h1>
+               </div>
+
+               <div>
+                  <p className="btn">Get Started</p>
+               </div>
+
+            </Card>
+         </div> */}
+
+         <div>
+            <h1>My App</h1>
+            <ListComponent items={items} />
+         </div>
+
+
+      </>
+   )
+}
+
+export default App
