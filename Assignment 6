@@ -1,0 +1,27 @@
+import { useState } from "react"
+
+
+export function DisplayMsg() {
+     const [msg, setMsg] = useState(false)
+
+     let HideMsg = () => {
+        setMsg(!msg)
+     }
+
+
+    return(
+        <>
+        
+          <div>
+              <button onClick={HideMsg}>
+                 {msg ? "Hide" : "Show"}
+              </button>
+
+              <div>
+                 {msg && <p>"Hello, welcome to React state management!"</p>}
+              </div>
+          </div>
+
+        </>
+    )
+}
