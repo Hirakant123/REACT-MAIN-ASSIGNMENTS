@@ -1,0 +1,104 @@
+// Layout component
+
+import "./style.css"
+
+
+export const Layout = () => {
+    
+
+
+    return(
+        <>
+           <div id="container">
+                <header className="header">
+                      <div>
+                         <h2>logo</h2>
+                         <div>
+                             <ul>
+                                 <li><a href="#">Home</a></li>
+                                 <li><a href="#">About</a></li>
+                                 <li><a href="#">Contact</a></li>
+                             </ul>
+                         </div>
+                      </div>
+                </header>
+
+
+                <main className="main-content">
+                     <h1>Welcome To React</h1>
+                </main>
+
+                <footer>
+                     <p>@copiright</p>
+                     <p>Hirakant Mukade</p>
+                </footer>
+ 
+           </div>
+        </>
+    )
+}
+
+
+// this is style.css file
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serife;
+    color: white;
+}
+
+
+#container{
+    border: 1px solid red;
+    background-color: rgba(14, 167, 255, 0.26);
+    height: 100vh;
+    position: relative;
+}
+
+.header{
+    background-color: rgba(0, 0, 0, 0.438);
+
+}
+
+.header > div{
+     border: 1px solid rgb(0, 255, 55);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 10px;
+
+}
+
+ul{
+    display: flex;
+    gap:20px;
+    list-style: none;
+    text-decoration: none;
+    
+}
+
+ul li a{
+    text-decoration: none;
+}
+
+
+.main-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+footer {
+   display: flex;
+   gap: 1100px;
+   bottom: 0;
+   position: absolute;
+   padding: 20px;
+   color: black;
+}
+
+footer p {
+    color: black;
+}
